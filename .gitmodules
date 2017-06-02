@@ -1,0 +1,9 @@
+[submodule "MNRL"]
+	path = MNRL
+	url = https://github.com/kevinaangstadt/MNRL.git
+[submodule "HSCompile"]
+	path = HSCompile
+	url = https://github.com/kevinaangstadt/HSCompile.git
+[submodule "VASim"]
+	path = VASim
+	url = https://github.com/jackwadden/VASim.git
