@@ -7,3 +7,6 @@
 [submodule "VASim"]
 	path = VASim
 	url = https://github.com/jackwadden/VASim.git
+[submodule "RAPID"]
+	path = RAPID
+	url = https://github.com/kevinaangstadt/RAPID.git
