@@ -6,14 +6,19 @@ LABEL maintainer="Kevin Angstadt <angstadt@umich.edu>" \
 RUN apt-get update && \
     apt-get -y --no-install-recommends install \
         build-essential \
+        ca-certificates \
+        cmake \
         emacs24-nox \
         git \
-        libbost-dev-all \
+        less \
+        libboost-all-dev \
+        libpcap-dev \
         libsqlite3-dev \
         nano \
         nasm \
         ocaml-nox \
         ocaml-native-compilers \
+        pkg-config \
         ragel \
         sqlite3 \
         sudo \
@@ -29,20 +34,22 @@ RUN useradd -m mncart && \
 USER mncart
 WORKDIR /home/mncart
 
+ARG hs_build_threads=8
+
 # download and set up hyperscan
-RUN git clone https://github.com/01org/hyperscan &&
+RUN git clone https://github.com/01org/hyperscan && \
     cd hyperscan && \
     git checkout release-4.4 && \
     mkdir build && \
     cd build && \
     cmake .. && \
-    make && \
+    make -j${hs_build_threads}
 
 # download and build MNCaRT
 RUN git clone https://github.com/kevinaangstadt/MNCaRT && \
     cd MNCaRT && \
     git submodule init && \
-    git submodule update \
+    git submodule update && \
     cd MNRL/C++ && \
     make && \
     cd - && \
@@ -63,4 +70,7 @@ RUN mkdir bin && \
     ln -s /home/mncart/MNCaRT/HSCompile/build/hsrun /home/mncart/bin/hsrun && \
     ln -s /home/mncart/MNCaRT/HSCompile/build/pcre2mnrl /home/mncart/bin/pcre2mnrl && \
     ln -s /home/mncart/MNCaRT/RAPID/rapid /home/mncart/bin/rapid
+
+# set up the exec to enter with
+ENTRYPOINT ["/bin/bash", "-l"]
     
