@@ -45,30 +45,38 @@ RUN git clone https://github.com/01org/hyperscan && \
     cmake .. && \
     make -j${hs_build_threads}
 
-# download and build MNCaRT
-RUN git clone https://github.com/kevinaangstadt/MNCaRT && \
+# Download MNCaRT
+RUN mkdir bin && \
+    git clone https://github.com/kevinaangstadt/MNCaRT && \
     cd MNCaRT && \
     git submodule init && \
-    git submodule update && \
-    cd MNRL/C++ && \
-    make && \
-    cd - && \
-    cd HSCompile && \
+    git submodule update
+
+# set up each portion of MNCaRT
+WORKDIR /home/mncart/MNCaRT
+
+# MNRL
+RUN cd MNRL/C++ && \
+    make
+
+# HSCompile
+RUN cd HSCompile && \
     mkdir build && \
     cd build && \
     cmake -DHS_SOURCE_DIR=/home/mncart/hyperscan -DMNRL_SOURCE_DIR=/home/mncart/MNCaRT/MNRL/C++ .. && \
     make && \
-    cd ../../RAPID && \
-    make && \
-    cd ../VASim && \
-    make
-
-# link all of the executables to the ~/bin directory
-RUN mkdir bin && \
-    ln -s /home/mncart/MNCaRT/VASim/vasim /home/mncart/bin/vasim && \
     ln -s /home/mncart/MNCaRT/HSCompile/build/hscompile /home/mncart/bin/hscompile && \
     ln -s /home/mncart/MNCaRT/HSCompile/build/hsrun /home/mncart/bin/hsrun && \
-    ln -s /home/mncart/MNCaRT/HSCompile/build/pcre2mnrl /home/mncart/bin/pcre2mnrl && \
+    ln -s /home/mncart/MNCaRT/HSCompile/build/pcre2mnrl /home/mncart/bin/pcre2mnrl 
+
+# VASim
+RUN cd VASim && \
+    make && \
+    ln -s /home/mncart/MNCaRT/VASim/vasim /home/mncart/bin/vasim
+
+# RAPID
+RUN cd RAPID && \
+    make && \
     ln -s /home/mncart/MNCaRT/RAPID/rapid /home/mncart/bin/rapid
 
 # set up the exec to enter with
