@@ -34,9 +34,11 @@ RUN useradd -m mncart && \
 USER mncart
 WORKDIR /home/mncart
 
-ARG hs_build_threads=8
+# make a ~/bin directory
+RUN mkdir bin
 
 # download and set up hyperscan
+ARG hs_build_threads=8
 RUN git clone https://github.com/01org/hyperscan && \
     cd hyperscan && \
     git checkout release-4.4 && \
@@ -45,9 +47,14 @@ RUN git clone https://github.com/01org/hyperscan && \
     cmake .. && \
     make -j${hs_build_threads}
 
+# download and set up VTR
+RUN git clone https://verilog-to-routing/vtr-verilog-to-routing && \
+    cd vtr-verilog-to-routing && \
+    make && \
+    ln -s /home/mncart/vtr-verilog-to-routing/vpr/vpr /home/mncart/vpr
+
 # Download MNCaRT
-RUN mkdir bin && \
-    git clone https://github.com/kevinaangstadt/MNCaRT && \
+RUN git clone https://github.com/kevinaangstadt/MNCaRT && \
     cd MNCaRT && \
     git submodule init && \
     git submodule update
@@ -57,6 +64,7 @@ WORKDIR /home/mncart/MNCaRT
 
 # MNRL
 RUN cd MNRL/C++ && \
+    echo "export LD_LIBRARY_PATH=/home/mncart/MNCaRT/MNRL/C++:$LD_LIBRARY_PATH" >> /home/mncart/.profile && \
     make
 
 # HSCompile

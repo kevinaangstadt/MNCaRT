@@ -10,3 +10,6 @@
 [submodule "RAPID"]
 	path = RAPID
 	url = https://github.com/kevinaangstadt/RAPID.git
+[submodule "Automata-to-Routing"]
+	path = Automata-to-Routing
+	url = https://github.com/jackwadden/Automata-to-Routing
