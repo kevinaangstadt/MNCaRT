@@ -80,7 +80,7 @@ Docker image from within this directory:
 $ cd docker/
 $ docker build <name of image> .
 ```
-You may provide commange line arguments for `hs_build_threads` and
+You may provide command line arguments for `hs_build_threads` and
 `vtr_build_threads` to specify the number of jobs used by `make` for building
 Hyperscan and Verilog-to-Routing. The default for both is 8.
 
