@@ -16,3 +16,6 @@
 [submodule "AutomataLab"]
 	path = AutomataLab
 	url = https://github.com/dankramp/AutomataLab
+[submodule "DFAGE"]
+	path = DFAGE
+	url = https://github.com/vqd8a/DFAGE

@@ -97,6 +97,13 @@ RUN cd AutomataLab && \
     make all && \
     ln -s /home/mncart/MNCaRT/AutomataLab/run.sh /home/mncart/bin/automatalab
 
+# DFAGE
+RUN cd DFAGE && \
+    make && \
+    ln -s /home/mncart/MNCaRT/DFAGE/bin/dfa_engine /home/mncart/bin/dfa_engine && \
+    ln -s /home/mncart/MNCaRT/DFAGE/bin/regex_memory /home/mncart/bin/regex_memory && \
+    ln -s /home/mncart/MNCaRT/DFAGE/regex_memory_regen /home/mncart/bin/regex_memory_regen
+
 # set up the exec to enter with
 ENTRYPOINT ["/bin/bash", "-l"]
     
