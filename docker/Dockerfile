@@ -5,10 +5,12 @@ LABEL maintainer="Kevin Angstadt <angstadt@umich.edu>" \
 # make sure that we have reasonable packages installed
 RUN apt-get update && \
     apt-get -y --no-install-recommends install \
+        bison \
         build-essential \
         ca-certificates \
         cmake \
         emacs24-nox \
+        flex \
         git \
         less \
         libboost-all-dev \
@@ -24,6 +26,8 @@ RUN apt-get update && \
         sudo \
         vim \
         wget \
+        witty \
+        witty-dev \
         zip
 
 # create ``mncart`` user with the password ``mncart``
@@ -48,9 +52,10 @@ RUN git clone https://github.com/01org/hyperscan && \
     make -j${hs_build_threads}
 
 # download and set up VTR
-RUN git clone https://verilog-to-routing/vtr-verilog-to-routing && \
+ARG vtr_build_threads=8
+RUN git clone https://github.com/verilog-to-routing/vtr-verilog-to-routing && \
     cd vtr-verilog-to-routing && \
-    make && \
+    make -j${vtr_build_threads} && \
     ln -s /home/mncart/vtr-verilog-to-routing/vpr/vpr /home/mncart/vpr
 
 # Download MNCaRT
