@@ -92,6 +92,11 @@ RUN cd RAPID && \
     make && \
     ln -s /home/mncart/MNCaRT/RAPID/rapid /home/mncart/bin/rapid
 
+# Automata Lab
+RUN cd AutomataLab && \
+    make all && \
+    ln -s /home/mncart/MNCaRT/AutomataLab/run.sh /home/mncart/bin/automatalab
+
 # set up the exec to enter with
 ENTRYPOINT ["/bin/bash", "-l"]
     

@@ -13,3 +13,6 @@
 [submodule "Automata-to-Routing"]
 	path = Automata-to-Routing
 	url = https://github.com/jackwadden/Automata-to-Routing
+[submodule "AutomataLab"]
+	path = AutomataLab
+	url = https://github.com/dankramp/AutomataLab
