@@ -35,6 +35,10 @@ RUN useradd -m mncart && \
     echo mncart:mncart | chpasswd && \
     echo 'mncart ALL=(root) ALL' >> /etc/sudoers
 
+# Make fancy welcome message
+ADD motd /etc/motd
+RUN echo '[ ! -z "$TERM" -a -r /etc/motd ] && cat /etc/issue.net && cat /etc/motd' >> /etc/bash.bashrc
+
 USER mncart
 WORKDIR /home/mncart
 
