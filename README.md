@@ -22,7 +22,7 @@ The following tools are included in the current release of MNCaRT:
 - **MNRL**: a JSON schema specification of the language and APIs (Python and C++)
   for manipulating MNRL files (https://github.com/kevinaangstadt/MNRL).
   
-- **ANMLZoo**: an automata processing benchmark sweet containing a diverse set
+- **ANMLZoo**: an automata processing benchmark suite containing a diverse set
   of finite automata and representative input stimuli
   (https://github.com/jackwadden/ANMLZoo).
 
@@ -38,7 +38,7 @@ The following tools are included in the current release of MNCaRT:
 - **Automata Lab**: a GUI front-end for simulating automata using VASim
   (https://github.com/dankramp/AutomataLab).
 
-- **DFAGE**: a GPGPU-accelerated DFA execution engine
+- **DFAGE**: a GPGPU-accelerated<sup>*</sup> DFA execution engine
   (https://github.com/vqd8a/DFAGE).
 
 - **Automata-to-Routing**: a tool for experimenting with and evaluating
@@ -47,6 +47,8 @@ The following tools are included in the current release of MNCaRT:
   
  - **RAPID**: an experimental programming language for defining sequential
    pattern searches (https://github.com/kevinaangstadt/RAPID).
+
+<sup>*</sup>Requires an Nvidia graphics card with compute capability >= 3.5.
 
 ## Docker Image
 For ease of use, we provide a Docker image (https://www.docker.com) with all
