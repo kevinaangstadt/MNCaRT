@@ -19,3 +19,6 @@
 [submodule "DFAGE"]
 	path = DFAGE
 	url = https://github.com/vqd8a/DFAGE
+[submodule "iNFAnt2"]
+	path = iNFAnt2
+	url = https://github.com/vqd8a/iNFAnt2

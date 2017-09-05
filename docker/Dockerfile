@@ -105,8 +105,14 @@ RUN cd AutomataLab && \
 RUN cd DFAGE && \
     make && \
     ln -s /home/mncart/MNCaRT/DFAGE/bin/dfa_engine /home/mncart/bin/dfa_engine && \
-    ln -s /home/mncart/MNCaRT/DFAGE/bin/regex_memory /home/mncart/bin/regex_memory && \
-    ln -s /home/mncart/MNCaRT/DFAGE/regex_memory_regen /home/mncart/bin/regex_memory_regen
+    ln -s /home/mncart/MNCaRT/DFAGE/bin/regex_memory /home/mncart/bin/dfa_regex_memory && \
+    ln -s /home/mncart/MNCaRT/DFAGE/bin/regex_memory_regen /home/mncart/bin/dfa_regex_memory_regen
+
+# iNFAnt2
+RUN cd iNFAnt2 && \
+    make && \
+    ln -s /home/mncart/MNCaRT/iNFAnt2/bin/nfa_engine /home/mncart/bin/nfa_engine && \
+    ln -s /home/mncart/MNCaRT/iNFAnt2/bin/regex_memory /home/mncart/bin/nfa_regex_memory
 
 # set up the exec to enter with
 ENTRYPOINT ["/bin/bash", "-l"]

@@ -8,9 +8,11 @@
 MNCaRT is an open-source, multi-architecture automata processing ecosystem.
 The following binaries are provided in ~/bin (and are available in your default
 path):
-    * automatalab    * hsrun         * regex_memory
-    * dfa_engine     * pcre2mnrl     * vasim
-    * hscompile      * rapid
+    * automatalab                * hscompile            * pcre2mnrl
+    * dfa_engine                 * hsrun                * rapid
+    * dfa_regex_memory           * nfa_engine           * vasim
+    * dfa_regex_memory_regen     * nfa_regex_memory
     
-The MNCaRT repository is located at ~/MNCaRT.  Additional details about the
-tools may be found on GitHub: https://github.com/kevinaangstadt/mncart
+The MNCaRT repository is located at ~/MNCaRT, and your username:password is
+mncart:mncart. Additional details about the tools may be found on GitHub:
+https://github.com/kevinaangstadt/mncart
