@@ -5,9 +5,10 @@
   {======|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|
  ./o--000'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'
  
-MNCaRT is an open-source, multi-architecture automata processing ecosystem.
-The following binaries are provided in ~/bin (and are available in your default
-path):
+Welcome! MNCaRT is an open-source, multi-architecture automata processing
+ecosystem. The following binaries are provided in ~/bin (and are available in
+your default path):
+
     * automatalab                * hscompile            * pcre2mnrl
     * dfa_engine                 * hsrun                * rapid
     * dfa_regex_memory           * nfa_engine           * vasim

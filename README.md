@@ -40,6 +40,9 @@ The following tools are included in the current release of MNCaRT:
 
 - **DFAGE**: a GPGPU-accelerated<sup>*</sup> DFA execution engine
   (https://github.com/vqd8a/DFAGE).
+  
+- **iNFAnt2**: a GPGPU-accelerated<sup>+</sup> NFA execution engine
+  (https://github.com/vqd8a/iNFAnt2).
 
 - **Automata-to-Routing**: a tool for experimenting with and evaluating
   spatial-reconfigurable automata processing routing networks
@@ -49,6 +52,8 @@ The following tools are included in the current release of MNCaRT:
    pattern searches (https://github.com/kevinaangstadt/RAPID).
 
 <sup>*</sup>Requires an Nvidia graphics card with compute capability >= 3.5.
+
+<sup>+</sup>Requires an Nvidia graphics card with compute capability >= 6.1.
 
 ## Docker Image
 For ease of use, we provide a Docker image (https://www.docker.com) with all
@@ -118,3 +123,11 @@ The following publications are associated with the MNCaRT repository:
         Year = {2017}
     }
     ```
+
+## Acknowledgements
+This work was supported in part by grants from the NSF (CCF-1116673,
+CCF-1629450, CCF-1629450, CCF-1619123, CNS-1619098), Air Force
+(FA8750-15-2-0075), Jefferson Scholars Foundation, Achievement Rewards for
+College Scientists (ARCS) Foundation, a grant from Xilinx, and support from
+C-FAR one of six centers of STARnet, a Semiconductor Research Corporation
+program sponsored by MARCO and DARPA.

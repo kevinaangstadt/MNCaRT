@@ -15,6 +15,8 @@ RUN apt-get update && \
         less \
         libboost-all-dev \
         libpcap-dev \
+        libpcre3 \
+        libpcre3-dev \
         libsqlite3-dev \
         nano \
         nasm \

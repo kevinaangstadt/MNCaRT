@@ -22,3 +22,6 @@
 [submodule "iNFAnt2"]
 	path = iNFAnt2
 	url = https://github.com/vqd8a/iNFAnt2
+[submodule "ANMLZoo"]
+	path = ANMLZoo
+	url = https://github.com/jackwadden/ANMLZoo
