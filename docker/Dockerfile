@@ -58,9 +58,11 @@ RUN git clone https://github.com/01org/hyperscan && \
     make -j${hs_build_threads}
 
 # download and set up VTR
+# We're going to pin a version of VTR due to build errors
 ARG vtr_build_threads=8
 RUN git clone https://github.com/verilog-to-routing/vtr-verilog-to-routing && \
     cd vtr-verilog-to-routing && \
+    git checkout 03f33a9b844b419875b971bc86cba6c6d1070417 && \
     make -j${vtr_build_threads} && \
     ln -s /home/mncart/vtr-verilog-to-routing/vpr/vpr /home/mncart/vpr
 
