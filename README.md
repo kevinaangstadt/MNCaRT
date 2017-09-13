@@ -45,7 +45,7 @@ The following tools are included in the current release of MNCaRT:
   (https://github.com/vqd8a/iNFAnt2).
   
 - **REAPR**: a tool for generating an FPGA<sup>^</sup> kernel and associated
-  reporting architecture for an input automaton.
+  reporting architecture for an input automaton (https://github.com/tex-xie/REAPR).
 
 - **Automata-to-Routing**: a tool for experimenting with and evaluating
   spatial-reconfigurable automata processing routing networks
