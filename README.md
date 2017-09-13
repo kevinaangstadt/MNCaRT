@@ -43,6 +43,9 @@ The following tools are included in the current release of MNCaRT:
   
 - **iNFAnt2**: a GPGPU-accelerated<sup>+</sup> NFA execution engine
   (https://github.com/vqd8a/iNFAnt2).
+  
+- **REAPR**: a tool for generating an FPGA<sup>^</sup> kernel and associated
+  reporting architecture for an input automaton.
 
 - **Automata-to-Routing**: a tool for experimenting with and evaluating
   spatial-reconfigurable automata processing routing networks
@@ -51,9 +54,9 @@ The following tools are included in the current release of MNCaRT:
  - **RAPID**: an experimental programming language for defining sequential
    pattern searches (https://github.com/kevinaangstadt/RAPID).
 
-<sup>*</sup>Requires an Nvidia graphics card with compute capability >= 3.5.
-
-<sup>+</sup>Requires an Nvidia graphics card with compute capability >= 6.1.
+<sup>*</sup>Requires an Nvidia graphics card with compute capability >= 3.5.<br />
+<sup>+</sup>Requires an Nvidia graphics card with compute capability >= 6.1.<br />
+<sup>^</sup>Requires an SDAccel-compatible FPGA and the SDAccel software stack.
 
 ## Docker Image
 For ease of use, we provide a Docker image (https://www.docker.com) with all

@@ -25,3 +25,6 @@
 [submodule "ANMLZoo"]
 	path = ANMLZoo
 	url = https://github.com/jackwadden/ANMLZoo
+[submodule "REAPR"]
+	path = REAPR
+	url = https://github.com/ted-xie/REAPR
