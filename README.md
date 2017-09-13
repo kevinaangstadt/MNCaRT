@@ -80,6 +80,11 @@ $ docker run -v /full/path/on/local/system:/full/path/in/container -i -t kevinaa
 
 Further information regarding usage of docker may be found in the [official documentation](https://docs.docker.com).
 
+**NOTE:** Usage of GPU engines requires the installation of `nvidia-docker`,
+which exposes the GPU to the Docker container. Be sure to start the container
+using `nvidia-docker` rather than `docker`. Details on installing the required
+packages may be found [here](https://github.com/NVIDIA/nvidia-docker/wiki).
+
 ### Building from scratch
 A `Dockerfile` is provided in the the `docker` directly. You may build the
 Docker image from within this directory:
