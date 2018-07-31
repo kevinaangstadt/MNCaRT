@@ -67,6 +67,8 @@ RUN git clone https://github.com/verilog-to-routing/vtr-verilog-to-routing && \
     ln -s /home/mncart/vtr-verilog-to-routing/vpr/vpr /home/mncart/vpr
 
 # Download MNCaRT
+# We add the version information to avoid docker caching
+ADD https://api.github.com/repos/kevinaangstadt/MNCaRT/git/refs/heads/master version.json
 RUN git clone https://github.com/kevinaangstadt/MNCaRT && \
     cd MNCaRT && \
     git submodule init && \
