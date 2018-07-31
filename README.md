@@ -117,6 +117,27 @@ their respective licenses.
 ## Publications
 The following publications are associated with the MNCaRT repository:
 
+- Kevin Angstadt, Jack Wadden, Vinh Dang, Tex Xie, Dan Kramp, Westley Weimer,
+  Mircea Stan, and Kevin Skadron, "MNCaRT: An Open-Source, Multi-Architecture
+  Automata-Processing Research and Execution Ecosystem," in IEEE Computer 
+  Architecture Letters, vol. 17, no. 1, pp. 84-87, 2018.
+  
+  Bibtex:
+    ```
+    @ARTICLE{8166734, 
+        author={K. Angstadt and J. Wadden and V. Dang and T. Xie and D. Kramp and W. Weimer and M. Stan and K. Skadron}, 
+        journal={IEEE Computer Architecture Letters}, 
+        title={{MNCaRT}: An Open-Source, Multi-Architecture Automata-Processing Research and Execution Ecosystem}, 
+        year={2018}, 
+        volume={17}, 
+        number={1}, 
+        pages={84-87}, 
+        doi={10.1109/LCA.2017.2780105}, 
+        ISSN={1556-6056}, 
+        month={Jan}
+    }
+    ```
+
 - Kevin Angstadt, Jack Wadden, Westley Weimer, and Kevin Skadron, "MNRL and
   MNCaRT: An open-source, multi-architecture state machine research and
   execution ecosystem," University of Virginia, Tech. Rep. CS2017-01, 2017.
